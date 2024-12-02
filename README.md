@@ -1,2 +1,4 @@
-# compiler
-Source code for the compiler framework I developed during college
+A fairly advanced compiler framework with a complete front-end for the latest standard of the C programming language. 
+Uses a modular and extensible architecture build around a virtual-machine model with an intermediate representation in SSA form running inside an interpreter. 
+
+Implements more than 30 sophisticated inter- and intra-procedural optimizations and analyses (global value numbering and PRE, redundant load/store elimination, expression re-association, conditional constant propagation, peephole simplifications, aggressive dead code elimination, loop-invariant code motion, jump-threading, inlining, indirect call promotion, interprocedural constant propagation, symbolic and type-based alias analysis, operand interval estimation, call graph construction and many more).
