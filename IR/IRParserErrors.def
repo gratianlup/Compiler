@@ -1,0 +1,35 @@
+// IRParserErrors.def
+// Copyright (c) Lup Gratian
+// 
+// Contains the list with the error definitions used by the IR Parser.
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#line 1
+error(INVALID_TOKEN)
+error(INVALID_ARRAY_SIZE)
+error(INVALID_TYPE)
+error(INVALID_TYPENAME)
+error(TYPENAME_NOT_FOUND)
+error(EXPECTED_TYPE)
+error(EXPECTED_INTEGER)
+error(EXPECTED_OPEN_PAREN)
+error(EXPECTED_CLOSE_PAREN)
+error(EXPECTED_OPEN_SQUARE)
+error(EXPECTED_CLOSE_SQUARE)
+error(EXPECTED_OPEN_CURLY)
+error(EXPECTED_CLOSE_CURLY)
+error(EXPECTED_IDENTIFIER)
+error(EXPECTED_DOT)
+error(EXPECTED_EQUAL)
+error(EXPECTED_OFFSET)
+error(EXPECTED_COLON)
+error(EXPECTED_COMMA)
+error(EXPECTED_FUNCTION)
+error(EXPECTED_OPERAND)
+error(INVALID_INITIALIZER)
+error(DUPLICATE_SYMBOL)
+error(INITIALIZER_COUNT)
+error(INVALID_ATTRIBUTES)
+error(INVALID_IDENTIFIER)
+error(INVALID_ELLIPSIS)
+error(INVALID_FIELD)
+error(INVALID_INTRINSIC)

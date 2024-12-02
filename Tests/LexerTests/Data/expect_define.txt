@@ -1,0 +1,25 @@
+numb # 123
+str # abc
+op
+numb # 456
+numb # 1
+op
+numb # 2
+op
+numb # 3
+numb # 123
+op
+numb # 2
+op
+numb # 123
+str # abc
+op
+numb # 456
+op
+str # abc
+op
+numb # 456
+op
+str # abc
+op
+numb # 456

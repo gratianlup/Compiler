@@ -1,0 +1,49 @@
+keyword("auto",          Keyword_Auto       )
+keyword("break",         Keyword_Break      )
+keyword("case",          Keyword_Case       )
+keyword("char",          Keyword_Char       )
+keyword("wchar_t",       Keyword_WChar      )
+keyword("const",         Keyword_Const      )
+keyword("continue",      Keyword_Continue   )
+keyword("default",       Keyword_Default    )
+keyword("do",            Keyword_Do         )
+keyword("double",        Keyword_Double     )
+keyword("else",          Keyword_Else       )
+keyword("enum",          Keyword_Enum       )
+keyword("extern",        Keyword_Extern     )
+keyword("float",         Keyword_Float      )
+keyword("for",           Keyword_For        )
+keyword("goto",          Keyword_Goto       )
+keyword("if",            Keyword_If         )
+keyword("inline",        Keyword_Inline     )
+keyword("int",           Keyword_Int        )
+keyword("long",          Keyword_Long       )
+keyword("register",      Keyword_Register   )
+keyword("restrict",      Keyword_Restrict   )
+keyword("return",        Keyword_Return     )
+keyword("short",         Keyword_Short      )
+keyword("signed",        Keyword_Signed     )
+keyword("sizeof",        Keyword_Sizeof     )
+keyword("static",        Keyword_Static     )
+keyword("struct",        Keyword_Struct     )
+keyword("switch",        Keyword_Switch     )
+keyword("typedef",       Keyword_Typedef    )
+keyword("union",         Keyword_Union      )
+keyword("unsigned",      Keyword_Unsigned   )
+keyword("void",          Keyword_Void       )
+keyword("volatile",      Keyword_Volatile   )
+keyword("while",         Keyword_While      )
+keyword("_Bool",         Keyword_Bool       )
+keyword("__int8",        Keyword_Int8       ) /* MS extension */
+keyword("__int16",       Keyword_Int16      ) /* MS extension */
+keyword("__int32",       Keyword_Int32      ) /* MS extension */
+keyword("__int64",       Keyword_Int64      ) /* MS extension */
+keyword("__declspec",    Keyword_Declspec   ) /* MS extension */
+keyword("__cdecl",       Keyword_Cdecl      ) /* MS extension */
+keyword("__fastcall",    Keyword_Fastcall   ) /* MS extension */
+keyword("__stdcall",     Keyword_Stdcall    ) /* MS extension */
+keyword("__inline",      Keyword_Inline2    ) /* MS extension */
+keyword("__forceinline", Keyword_ForceInline) /* MS extension */
+keyword("__unaligned ",  Keyword_Unaligned  ) /* MS extension */
+keyword("__restrict ",   Keyword_Restrict2  ) /* MS extension */
+keyword("__w64 ",        Keyword_W64        ) /* MS extension */

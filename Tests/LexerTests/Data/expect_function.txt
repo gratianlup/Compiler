@@ -1,0 +1,38 @@
+numb # 1
+
+numb # 1
+op
+numb # 2
+numb # 1
+op
+numb # 2
+op
+numb # 3
+
+
+numb # 4
+
+numb # 4
+op
+numb # 5
+
+numb # 4
+op
+numb # 5
+op
+numb # 7
+numb # 7
+op
+numb # 8
+numb # 7
+op
+numb # 8
+op
+numb # 9
+
+numb # 6
+char # x # w
+numb # 10
+numb # 11
+str # abc
+numb # 12

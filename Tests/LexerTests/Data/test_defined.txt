@@ -1,0 +1,12 @@
+#define ABC
+#define DEF
+
+#if !defined(ABC)
+	#define ADD(x) x + 1
+#elif defined(DEF)
+	#define ADD(x) x + 2
+#else
+	#define ADD(x) x + 3
+#endif
+
+ADD(1)

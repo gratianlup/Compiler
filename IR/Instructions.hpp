@@ -1,0 +1,5 @@
+#include "ArithmeticInstructions.hpp"
+#include "ConversionInstructions.hpp"
+#include "LogicalInstructions.hpp"
+#include "ControlInstructions.hpp"
+#include "OtherInstructions.hpp"

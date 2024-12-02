@@ -1,0 +1,8 @@
+numb # 123
+ident # abc
+str # 123
+char # a
+str # xyz # w
+char # 2 # w
+kwd # for
+kwd # else

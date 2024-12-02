@@ -1,0 +1,73 @@
+// Instructions.def
+// Copyright (c) Lup Gratian
+//
+// Contains the list with all the supported instruction.
+// If a new instruction is created it must be added here.
+//
+// If 'ONLY_SELECTED' is defined, only the instruction in the selected categories
+// are considered. To select a category, use '#define SELECT_XXX'
+// (for example, '#define SELECT_ARITHMETIC' to select arithmetic instructions).
+//
+// If 'NO_XXX' is defined, the specified category of instructions is not considered
+// (for example, '#define NO_CONTROL' to skip control instructions).
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Class name, Category, Printed name
+
+#if !defined(NO_ARITHMETIC) && (!defined(ONLY_SELECTED) || defined(SELECT_ARITHMETIC))
+instruction(Add,  Arithmetic, "add")
+instruction(Sub,  Arithmetic, "sub")
+instruction(Mul,  Arithmetic, "mul")
+instruction(Div,  Arithmetic, "div")
+instruction(Udiv, Arithmetic, "udiv")
+instruction(Mod,  Arithmetic, "mod")
+instruction(Umod, Arithmetic, "umod")
+instruction(Fadd, Arithmetic, "fadd")
+instruction(Fsub, Arithmetic, "fsub")
+instruction(Fmul, Arithmetic, "fmul")
+instruction(Fdiv, Arithmetic, "fdiv")
+#endif
+
+#if !defined(NO_CONVERSION) && (!defined(ONLY_SELECTED) || defined(SELECT_CONVERSION))
+instruction(Trunc,  Conversion, "trunc")
+instruction(Zext,   Conversion, "zext")
+instruction(Sext,   Conversion, "sext")
+instruction(Ftoi,   Conversion, "ftoi")
+instruction(Ftoui,  Conversion, "ftoui")
+instruction(Itof,   Conversion, "itof")
+instruction(Uitof,  Conversion, "uitof")
+instruction(Ftrunc, Conversion, "ftrunc")
+instruction(Fext,   Conversion, "fext")
+instruction(Ptoi,   Conversion, "ptoi")
+instruction(Itop,   Conversion, "itop")
+instruction(Ptop,   Conversion, "ptop")
+#endif
+
+#if !defined(NO_LOGICAL) && (!defined(ONLY_SELECTED) || defined(SELECT_LOGICAL))
+instruction(Shl,  Logical, "shl")
+instruction(Shr,  Logical, "shr")
+instruction(Ushr, Logical, "ushr")
+instruction(And,  Logical, "and")
+instruction(Or,   Logical, "or")
+instruction(Xor,  Logical, "xor")
+#endif
+
+#if !defined(NO_CONTROL) && (!defined(ONLY_SELECTED) || defined(SELECT_CONTROL))
+instruction(Goto,   Control, "goto")
+instruction(If,     Control, "if")
+instruction(Switch, Control, "switch")
+instruction(Call,   Control, "call")
+instruction(Return, Control, "ret")
+#endif
+
+#if !defined(NO_OTHER) && (!defined(ONLY_SELECTED) || defined(SELECT_OTHER))
+instruction(Cmp,      Other, "cmp")
+instruction(Ucmp,     Other, "ucmp")
+instruction(Fcmp,     Other, "fcmp")
+instruction(Load,     Other, "load")
+instruction(Store,    Other, "store")
+instruction(Address,  Other, "addr")
+instruction(Index,    Other, "index")
+instruction(Field,    Other, "field")
+instruction(Phi,      Other, "phi")
+instruction(Question, Other, "quest")
+#endif

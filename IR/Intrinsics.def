@@ -1,0 +1,12 @@
+// Intrinsics.def
+// Copyright (c) Lup Gratian
+//
+// Contains the list with all the built-in intrinsics.
+// If a new intrinsic is created it must also be added here.
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Class name - Intrinsic name (text form)
+intrinsic(CopyMemoryIntr,   "#copyMemory")
+intrinsic(SetMemoryIntr,    "#setMemory")
+intrinsic(StackTopIntr,     "#stackTop")
+intrinsic(IncStackTopIntr,  "#incStackTop")
+intrinsic(RestoreStackIntr, "#restoreStackIntr")

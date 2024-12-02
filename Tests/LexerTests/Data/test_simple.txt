@@ -1,0 +1,13 @@
+123
+abc
+// comment1
+"123"
+/* comment2
+comment2
+*/
+'a'
+L"xyz"
+L'2'
+for
+else
+// comment3 while

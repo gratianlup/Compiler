@@ -1,0 +1,15 @@
+op # oparen
+numb # 12
+op
+numb # 23
+op # cparen
+op
+numb # 5
+ident # abcd
+numb # 1
+op
+numb # 2
+op
+numb # 3
+op
+numb # 4

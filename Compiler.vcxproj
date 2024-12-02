@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release with Debug|Win32">
+      <Configuration>Release with Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release with Debug|x64">
+      <Configuration>Release with Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A56A3832-3E48-429F-8241-222863DCCDA8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ParallelC</RootNamespace>
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+    <ProjectName>Compiler</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\gtest\include;$(IncludePath)</IncludePath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtestd.lib;gtest_maind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS /D_CRT_SECURE_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4800;4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtestd.lib;gtest_maind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <CallingConvention>Cdecl</CallingConvention>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release with Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <CallingConvention>Cdecl</CallingConvention>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\gtest\msvc\gtest\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Abstraction\Platform.hpp" />
+    <ClInclude Include="Abstraction\PlatformString.hpp" />
+    <ClInclude Include="Abstraction\PlatformTime.hpp" />
+    <ClInclude Include="Abstraction\Windows\Console.hpp" />
+    <ClInclude Include="Abstraction\Windows\Float.hpp" />
+    <ClInclude Include="Abstraction\Windows\Integer.hpp" />
+    <ClInclude Include="Abstraction\Windows\IOConst.hpp" />
+    <ClInclude Include="Abstraction\Windows\Interlocked.hpp" />
+    <ClInclude Include="Abstraction\Windows\IO.hpp" />
+    <ClInclude Include="Abstraction\Windows\ProcessHelper.hpp" />
+    <ClInclude Include="Abstraction\Windows\SSE.hpp" />
+    <ClInclude Include="Abstraction\Windows\StringOps.hpp" />
+    <ClInclude Include="Abstraction\Windows\StringOpsConst.hpp" />
+    <ClInclude Include="Abstraction\Windows\Time.hpp" />
+    <ClInclude Include="Analysis\AliasAnalyzer.hpp" />
+    <ClInclude Include="Analysis\AliasCloningHeuristic.hpp" />
+    <ClInclude Include="Analysis\AliasInfo.hpp" />
+    <ClInclude Include="Analysis\AliasTag.hpp" />
+    <ClInclude Include="Analysis\AllocFunctionRecognizer.hpp" />
+    <ClInclude Include="Analysis\AllocHelper.hpp" />
+    <ClInclude Include="Analysis\AnalysisManager.hpp" />
+    <ClInclude Include="Analysis\BitVector.hpp" />
+    <ClInclude Include="Analysis\BitVectorBase.hpp" />
+    <ClInclude Include="Analysis\BranchFoldingCloningHeuristic.hpp" />
+    <ClInclude Include="Analysis\CallEdgeProfileEstimator.hpp" />
+    <ClInclude Include="Analysis\CallGraph.hpp" />
+    <ClInclude Include="Analysis\CallGraphBuilder.hpp" />
+    <ClInclude Include="Analysis\CallGraphPrinter.hpp" />
+    <ClInclude Include="Analysis\CFamilyLanguageInfo.hpp" />
+    <ClInclude Include="Analysis\CFamilyTag.hpp" />
+    <ClInclude Include="Analysis\CFGPrinter.hpp" />
+    <ClInclude Include="Analysis\CFGWalker.hpp" />
+    <ClInclude Include="Analysis\CloningHeuristic.hpp" />
+    <ClInclude Include="Analysis\ConstantEstimator.hpp" />
+    <ClInclude Include="Analysis\ConstantFolder.hpp" />
+    <ClInclude Include="Analysis\ConstantsCloningHeuristic.hpp" />
+    <ClInclude Include="Analysis\ControlDependenceGraph.hpp" />
+    <ClInclude Include="Analysis\DominanceFrontier.hpp" />
+    <ClInclude Include="Analysis\DominatorAlgorithm.hpp" />
+    <ClInclude Include="Analysis\EdgeCountProfile.hpp" />
+    <ClInclude Include="Analysis\EdgeEquivalenceInfo.hpp" />
+    <ClInclude Include="Analysis\EdgeProfileTag.hpp" />
+    <ClInclude Include="Analysis\GlobalConstantsTag.hpp" />
+    <ClInclude Include="Analysis\GlobalSideEffectsTag.hpp" />
+    <ClInclude Include="Analysis\GlobalUsersTag.hpp" />
+    <ClInclude Include="Analysis\GlobalSideEffects.hpp" />
+    <ClInclude Include="Analysis\GlobalUsersUpdater.hpp" />
+    <ClInclude Include="Analysis\IRSummary.hpp" />
+    <ClInclude Include="Analysis\IRSummaryBuilder.hpp" />
+    <ClInclude Include="Analysis\Loop.hpp" />
+    <ClInclude Include="Analysis\LoopSummary.hpp" />
+    <ClInclude Include=".\Analysis\LoopSummaryBuilder.hpp" />
+    <ClInclude Include="Analysis\LoopTag.hpp" />
+    <ClInclude Include="Analysis\LoopTreePrinter.hpp" />
+    <ClInclude Include="Analysis\ParameterAliasTag.hpp" />
+    <ClInclude Include="Analysis\ParameterConstantsTag.hpp" />
+    <ClInclude Include="Analysis\ParameterFlags.hpp" />
+    <ClInclude Include="Analysis\Estimator.hpp" />
+    <ClInclude Include="Analysis\InductionVariable.hpp" />
+    <ClInclude Include="Analysis\InlineHeuristic.hpp" />
+    <ClInclude Include="Analysis\IRDominators.hpp" />
+    <ClInclude Include="Analysis\DominatorsOrder.hpp" />
+    <ClInclude Include="Analysis\DominatorTreePrinter.hpp" />
+    <ClInclude Include="Analysis\DotPrinterBase.hpp" />
+    <ClInclude Include="Analysis\FloatArithmetic.hpp" />
+    <ClInclude Include="Analysis\FastInlineHeuristic.hpp" />
+    <ClInclude Include="Analysis\IntArithmetic.hpp" />
+    <ClInclude Include="Analysis\KnownBitsTag.hpp" />
+    <ClInclude Include="Analysis\LanguageInfo.hpp" />
+    <ClInclude Include="Analysis\LoopRecognizer.hpp" />
+    <ClInclude Include="Analysis\NoReturnWarning.hpp" />
+    <ClInclude Include="Analysis\OperandInfo.hpp" />
+    <ClInclude Include="Analysis\PatternMatching.hpp" />
+    <ClInclude Include="Analysis\EdgeProfileDataFormat.hpp" />
+    <ClInclude Include="Analysis\EdgeProfileEstimator.hpp" />
+    <ClInclude Include="Analysis\PointerParameterAlias.hpp" />
+    <ClInclude Include="Analysis\PointerParameterSections.hpp" />
+    <ClInclude Include="Analysis\ProfileAdjustment.hpp" />
+    <ClInclude Include="Analysis\ProfileInfo.hpp" />
+    <ClInclude Include="Analysis\EdgeProfileReader.hpp" />
+    <ClInclude Include="Analysis\RangeTag.hpp" />
+    <ClInclude Include="Analysis\SafetyInfo.hpp" />
+    <ClInclude Include="Analysis\SideEffectsSummary.hpp" />
+    <ClInclude Include="Analysis\SideEffectsSummaryBuilder.hpp" />
+    <ClInclude Include="Analysis\SimpleAliasAnalysis.hpp" />
+    <ClInclude Include="Analysis\SparseBitVector.hpp" />
+    <ClInclude Include="Analysis\DominatorTree.hpp" />
+    <ClInclude Include="Analysis\LatticePropagator.hpp" />
+    <ClInclude Include="Analysis\SSAReconstruction.hpp" />
+    <ClInclude Include="Analysis\SSAVerifier.hpp" />
+    <ClInclude Include="Analysis\SummaryBuilder.hpp" />
+    <ClInclude Include="Analysis\TypeClassTag.hpp" />
+    <ClInclude Include="Analysis\VariableAnalysis.hpp" />
+    <ClInclude Include="Analysis\CallAliasAnalysis.hpp" />
+    <ClInclude Include="Analysis\StdLibRecognizer.hpp" />
+    <ClInclude Include="Analysis\Summary.hpp" />
+    <ClInclude Include="Analysis\SummaryManager.hpp" />
+    <ClInclude Include="Analysis\SymbolicAliasAnalysis.hpp" />
+    <ClInclude Include="Analysis\TypeBasedAliasAnalysis.hpp" />
+    <ClInclude Include="Analysis\TypeInfo.hpp" />
+    <ClInclude Include="Analysis\UninitializedWarning.hpp" />
+    <ClInclude Include="Analysis\ValueNumber.hpp" />
+    <ClInclude Include="Analysis\VolatileVerifier.hpp" />
+    <ClInclude Include="Analysis\WarningClient.hpp" />
+    <ClInclude Include="AST\Attribute.hpp" />
+    <ClInclude Include="AST\Attributes.hpp" />
+    <ClInclude Include="AST\ConstantEvaluator.hpp" />
+    <ClInclude Include="AST\Declaration.hpp" />
+    <ClInclude Include="AST\DeclarationContext.hpp" />
+    <ClInclude Include="AST\Declarations.hpp" />
+    <ClInclude Include="AST\ASTDotPrinter.hpp" />
+    <ClInclude Include="AST\Expression.hpp" />
+    <ClInclude Include="AST\Expressions.hpp" />
+    <ClInclude Include="AST\Identifier.hpp" />
+    <ClInclude Include="AST\Qualifier.hpp" />
+    <ClInclude Include="AST\Statement.hpp" />
+    <ClInclude Include="AST\Statements.hpp" />
+    <ClInclude Include="AST\StructLayout.hpp" />
+    <ClInclude Include="AST\Type.hpp" />
+    <ClInclude Include="AST\TypeAlignment.hpp" />
+    <ClInclude Include="AST\TypeCombiner.hpp" />
+    <ClInclude Include="AST\TypeManager.hpp" />
+    <ClInclude Include="AST\Types.hpp" />
+    <ClInclude Include="AST\TypeSize.hpp" />
+    <ClInclude Include="AST\TypeString.hpp" />
+    <ClInclude Include="AST\Unit.hpp" />
+    <ClInclude Include="AST\Visitor.hpp" />
+    <ClInclude Include="Base\ASCIIEncoding.hpp" />
+    <ClInclude Include="Base\DateTime.hpp" />
+    <ClInclude Include="Base\DateTimeConst.hpp" />
+    <ClInclude Include="Base\DefaultComparer.hpp" />
+    <ClInclude Include="Base\DebugValidator.hpp" />
+    <ClInclude Include="Base\Dictionary.hpp" />
+    <ClInclude Include="Base\DictionaryConst.hpp" />
+    <ClInclude Include="Base\Directory.hpp" />
+    <ClInclude Include="Base\DirectoryInfo.hpp" />
+    <ClInclude Include="Base\Encoding.hpp" />
+    <ClInclude Include="Base\File.hpp" />
+    <ClInclude Include="Base\FileInfo.hpp" />
+    <ClInclude Include="Base\FileStream.hpp" />
+    <ClInclude Include="Base\FileSystemInfo.hpp" />
+    <ClInclude Include="Base\Heap.hpp" />
+    <ClInclude Include="Base\LinkedList.hpp" />
+    <ClInclude Include="Base\List.hpp" />
+    <ClInclude Include="Base\ListConst.hpp" />
+    <ClInclude Include="Base\LocalPointer.hpp" />
+    <ClInclude Include="Base\Log.hpp" />
+    <ClInclude Include="Base\LogFileTarget.hpp" />
+    <ClInclude Include="Base\LogTarget.hpp" />
+    <ClInclude Include="Base\MakePair.hpp" />
+    <ClInclude Include="Base\MemoryMappedStream.hpp" />
+    <ClInclude Include="Base\MemoryStream.hpp" />
+    <ClInclude Include="Base\NoCopy.hpp" />
+    <ClInclude Include="Base\ObjectDumper.hpp" />
+    <ClInclude Include="Base\ObjectHash.hpp" />
+    <ClInclude Include="Base\Package.hpp" />
+    <ClInclude Include="Base\PackageFormat.hpp" />
+    <ClInclude Include="Base\PackageReader.hpp" />
+    <ClInclude Include="Base\PackageWriter.hpp" />
+    <ClInclude Include="Base\Path.hpp" />
+    <ClInclude Include="Base\PointerReleaser.hpp" />
+    <ClInclude Include="Base\Process.hpp" />
+    <ClInclude Include="Base\Queue.hpp" />
+    <ClInclude Include="Base\NullValidator.hpp" />
+    <ClInclude Include="Base\SharedPointer.hpp" />
+    <ClInclude Include="Base\Sorting.hpp" />
+    <ClInclude Include="Base\Stack.hpp" />
+    <ClInclude Include="Base\StaticList.hpp" />
+    <ClInclude Include="Base\StaticQueue.hpp" />
+    <ClInclude Include="Base\StaticStack.hpp" />
+    <ClInclude Include="Base\Stopwatch.hpp" />
+    <ClInclude Include="Base\Stream.hpp" />
+    <ClInclude Include="Base\String.hpp" />
+    <ClInclude Include="Base\StreamReader.hpp" />
+    <ClInclude Include="Base\StreamWriter.hpp" />
+    <ClInclude Include="Base\StringBuffer.hpp" />
+    <ClInclude Include="Base\StringBuilder.hpp" />
+    <ClInclude Include="Base\TimeSpan.hpp" />
+    <ClInclude Include="Base\TypeInfo.hpp" />
+    <ClInclude Include="Base\UnicodeEncoding.hpp" />
+    <ClInclude Include="Base\UTF32Encoding.hpp" />
+    <ClInclude Include="Base\UTF8Encoding.hpp" />
+    <ClInclude Include="Code Generator\BinarySearchSwitchLowering.hpp" />
+    <ClInclude Include="Code Generator\BitmapSwitchLowering.hpp" />
+    <ClInclude Include="Code Generator\BranchlessIntrinsicLowering.hpp" />
+    <ClInclude Include="Code Generator\DivByConstantLowering.hpp" />
+    <ClInclude Include="Code Generator\DivLowering.hpp" />
+    <ClInclude Include="Code Generator\DivWithProfileLowering.hpp" />
+    <ClInclude Include="Code Generator\IntrinsicLowering.hpp" />
+    <ClInclude Include="Code Generator\JumpTableSwitchLowering.hpp" />
+    <ClInclude Include="Code Generator\LinearScanSwitchLowering.hpp" />
+    <ClInclude Include="Code Generator\MemoryIntrinsicLowering.hpp" />
+    <ClInclude Include="Code Generator\MulByConstantLowering.hpp" />
+    <ClInclude Include="Code Generator\MulLowering.hpp" />
+    <ClInclude Include="Code Generator\SelectiveSwitchLowering.hpp" />
+    <ClInclude Include="Code Generator\SwitchLowering.hpp" />
+    <ClInclude Include="Common\CompileConfiguration.hpp" />
+    <ClInclude Include="Common\CompileOptions.hpp" />
+    <ClInclude Include="Common\ConstantGen.hpp" />
+    <ClInclude Include="Common\Context.hpp" />
+    <ClInclude Include="Common\Diagnostic.hpp" />
+    <ClInclude Include="Common\Errors.hpp" />
+    <ClInclude Include="Common\FileId.hpp" />
+    <ClInclude Include="Common\FileManager.hpp" />
+    <ClInclude Include="Common\FileTracker.hpp" />
+    <ClInclude Include="Common\Info.hpp" />
+    <ClInclude Include="Common\LocationInfo.hpp" />
+    <ClInclude Include="Common\TargetData.hpp" />
+    <ClInclude Include="Common\Warnings.hpp" />
+    <ClInclude Include="Compilation Pass\AnalysisPass.hpp" />
+    <ClInclude Include="Compilation Pass\BlockPass.hpp" />
+    <ClInclude Include="Compilation Pass\ConfigurationDataFormat.hpp" />
+    <ClInclude Include="Compilation Pass\ConfigurationManager.hpp" />
+    <ClInclude Include="Compilation Pass\ConfigurationReader.hpp" />
+    <ClInclude Include="Compilation Pass\ConfigurationWriter.hpp" />
+    <ClInclude Include="Compilation Pass\FunctionPass.hpp" />
+    <ClInclude Include="Compilation Pass\GroupPass.hpp" />
+    <ClInclude Include="Compilation Pass\LoopPass.hpp" />
+    <ClInclude Include="Compilation Pass\Pass.hpp" />
+    <ClInclude Include="Compilation Pass\Configuration.hpp" />
+    <ClInclude Include="Compilation Pass\PassCollection.hpp" />
+    <ClInclude Include="Compilation Pass\PassContract.hpp" />
+    <ClInclude Include="Compilation Pass\PassDirectory.hpp" />
+    <ClInclude Include="Compilation Pass\PassEvent.hpp" />
+    <ClInclude Include="Compilation Pass\PassExecuter.hpp" />
+    <ClInclude Include="Compilation Pass\PassObserver.hpp" />
+    <ClInclude Include="Compilation Pass\PassScheduler.hpp" />
+    <ClInclude Include="Compilation Pass\PassStatistics.hpp" />
+    <ClInclude Include="Compilation Pass\UnitPass.hpp" />
+    <ClInclude Include="Driver\CommandParser.hpp" />
+    <ClInclude Include="Driver\DefinitionInitializer.hpp" />
+    <ClInclude Include="Driver\DiagnosticPrinter.h" />
+    <ClInclude Include="Driver\Driver.hpp" />
+    <ClInclude Include="IRGenerator\ArrayBoundsCheck.hpp" />
+    <ClInclude Include="IRGenerator\ExpressionGenerator.hpp" />
+    <ClInclude Include="IRGenerator\FunctionGenerator.hpp" />
+    <ClInclude Include="IRGenerator\GeneratorEvents.hpp" />
+    <ClInclude Include="IRGenerator\GeneratorHelpers.hpp" />
+    <ClInclude Include="IRGenerator\NameGenerator.hpp" />
+    <ClInclude Include="IRGenerator\TypeClassAnnotator.hpp" />
+    <ClInclude Include="IRGenerator\UnitGenerator.hpp" />
+    <ClInclude Include="IRGenerator\StatementGenerator.hpp" />
+    <ClInclude Include="IRGenerator\TypeGenerator.hpp" />
+    <ClInclude Include="IR\ArithmeticInstructions.hpp" />
+    <ClInclude Include="IR\Block.hpp" />
+    <ClInclude Include="IR\Constants.hpp" />
+    <ClInclude Include="IR\ConstantTable.hpp" />
+    <ClInclude Include="IR\ControlInstructions.hpp" />
+    <ClInclude Include="IR\ConversionInstructions.hpp" />
+    <ClInclude Include="IR\Function.hpp" />
+    <ClInclude Include="IR\GlobalVariable.hpp" />
+    <ClInclude Include="IR\Instructions.hpp" />
+    <ClInclude Include="IR\Interpreter.hpp" />
+    <ClInclude Include="IR\InterpreterDriver.hpp" />
+    <ClInclude Include="IR\Intrinsic.hpp" />
+    <ClInclude Include="IR\AtomicIntrinsics.hpp" />
+    <ClInclude Include="IR\Instruction.hpp" />
+    <ClInclude Include="IR\Intrinsics.hpp" />
+    <ClInclude Include="IR\IRDataFormat.hpp" />
+    <ClInclude Include="IR\IRReader.hpp" />
+    <ClInclude Include="IR\IRGenerator.hpp" />
+    <ClInclude Include="IR\IntrusiveList.hpp" />
+    <ClInclude Include="IR\IRStatistics.hpp" />
+    <ClInclude Include="IR\IRWriter.hpp" />
+    <ClInclude Include="IR\MathIntrinsics.hpp" />
+    <ClInclude Include="IR\MemoryIntrinsics.hpp" />
+    <ClInclude Include="IR\Operand.hpp" />
+    <ClInclude Include="IR\OtherIntrinsics.hpp" />
+    <ClInclude Include="IR\IRParserDriver.hpp" />
+    <ClInclude Include="IR\Parameter.hpp" />
+    <ClInclude Include="IR\References.hpp" />
+    <ClInclude Include="IR\ReferenceTable.hpp" />
+    <ClInclude Include="IR\StackIntrinsics.hpp" />
+    <ClInclude Include="IR\Symbol.hpp" />
+    <ClInclude Include="IR\Symbols.hpp" />
+    <ClInclude Include="IR\IRType.hpp" />
+    <ClInclude Include="IR\Tag.hpp" />
+    <ClInclude Include="IR\Tagged.hpp" />
+    <ClInclude Include="IR\Tags.hpp" />
+    <ClInclude Include="IR\Temporary.hpp" />
+    <ClInclude Include="IR\Unit.hpp" />
+    <ClInclude Include="IR\IRParser.hpp" />
+    <ClInclude Include="IR\IRPrinter.hpp" />
+    <ClInclude Include="IR\IRVerifier.hpp" />
+    <ClInclude Include="IR\TypeTable.hpp" />
+    <ClInclude Include="IR\IRTypes.hpp" />
+    <ClInclude Include="IR\Variable.hpp" />
+    <ClInclude Include="IR\Visitor.hpp" />
+    <ClInclude Include="IR\LogicalInstructions.hpp" />
+    <ClInclude Include="IR\OtherInstructions.hpp" />
+    <ClInclude Include="IR\InterpreterBuiltins.hpp" />
+    <ClInclude Include="IR\SymbolTable.hpp" />
+    <ClInclude Include="Lexer\CharSource.hpp" />
+    <ClInclude Include="Lexer\HeaderLookup.hpp" />
+    <ClInclude Include="Lexer\Identifiers.hpp" />
+    <ClInclude Include="Lexer\IdentifierTable.hpp" />
+    <ClInclude Include="Lexer\IfEvaluator.hpp" />
+    <ClInclude Include="Lexer\IncludeGraph.hpp" />
+    <ClInclude Include="Lexer\IncludeObserver.hpp" />
+    <ClInclude Include="Lexer\LexemeParsers.hpp" />
+    <ClInclude Include="Lexer\Lexer.hpp" />
+    <ClInclude Include="Lexer\MacroExpander.hpp" />
+    <ClInclude Include="Lexer\Preprocessor.hpp" />
+    <ClInclude Include="Lexer\Token.hpp" />
+    <ClInclude Include="Lexer\TokenCache.hpp" />
+    <ClInclude Include="Lexer\TokenObserver.hpp" />
+    <ClInclude Include="Lexer\TokenReader.hpp" />
+    <ClInclude Include="Lexer\TokenWriter.hpp" />
+    <ClInclude Include="Lexer\TokenDataFormat.hpp" />
+    <ClInclude Include="Lexer\TokenSource.hpp" />
+    <ClCompile Include="Analysis\AliasAnalyzer.cpp" />
+    <ClCompile Include="Analysis\AliasInfo.cpp" />
+    <ClCompile Include="Analysis\AllocFunctionRecognizer.cpp" />
+    <ClCompile Include="Analysis\AllocHelper.cpp" />
+    <ClCompile Include="Analysis\CallAliasAnalysis.cpp" />
+    <ClCompile Include="Analysis\CallGraph.cpp" />
+    <ClCompile Include="Analysis\CallGraphBuilder.cpp" />
+    <ClCompile Include="Analysis\CFamilyLanguageInfo.cpp" />
+    <ClCompile Include="Analysis\ConstantEstimator.cpp" />
+    <ClCompile Include="Analysis\ConstantFolderCall.cpp" />
+    <ClCompile Include="Analysis\ConstantFolderLoad.cpp" />
+    <ClCompile Include="Analysis\EdgeEquivalenceInfo.cpp" />
+    <ClCompile Include="Analysis\GlobalSideEffects.cpp" />
+    <ClCompile Include="Analysis\GlobalSideEffectsTag.cpp" />
+    <ClCompile Include="Analysis\Loop.cpp" />
+    <ClCompile Include="Analysis\LoopRecognizer.cpp" />
+    <ClCompile Include="Analysis\ParameterAliasTag.cpp" />
+    <ClCompile Include="Analysis\ParameterFlags.cpp" />
+    <ClCompile Include="Analysis\FastInlineHeuristic.cpp" />
+    <ClCompile Include="Analysis\InlineHeuristic.cpp" />
+    <ClCompile Include="Analysis\NoReturnWarning.cpp" />
+    <ClCompile Include="Analysis\OperandInfoBits.cpp" />
+    <ClCompile Include="Analysis\PointerParameterAlias.cpp" />
+    <ClCompile Include="Analysis\PointerParameterSections.cpp" />
+    <ClCompile Include="Analysis\RangeTag.cpp" />
+    <ClCompile Include="Analysis\SafetyInfo.cpp" />
+    <ClCompile Include="Analysis\LatticePropagator.cpp" />
+    <ClCompile Include="Analysis\SimpleAliasAnalysis.cpp" />
+    <ClCompile Include="Analysis\SSAReconstruction.cpp" />
+    <ClCompile Include="Analysis\SSAVerifier.cpp" />
+    <ClCompile Include="Analysis\SymbolicAliasAnalysis.cpp" />
+    <ClCompile Include="Analysis\TypeBasedAliasAnalysis.cpp" />
+    <ClCompile Include="Analysis\VariableAnalysis.cpp" />
+    <ClCompile Include="Analysis\UnusedWarning.cpp" />
+    <ClCompile Include="Analysis\ValueNumber.cpp" />
+    <ClCompile Include="Analysis\VolatileVerifier.cpp" />
+    <ClCompile Include="IRGenerator\ArrayBoundsCheck.cpp" />
+    <ClCompile Include="IRGenerator\NameGenerator.cpp" />
+    <ClCompile Include="IRGenerator\TypeClassAnnotator.cpp" />
+    <ClCompile Include="IR\Parameter.cpp" />
+    <ClCompile Include="IR\TypeTable.cpp" />
+    <ClCompile Include="Optimization\AdditivePeephole.cpp" />
+    <ClInclude Include="Optimization\AddressLowering.hpp" />
+    <ClInclude Include="Optimization\AggregateCopyPropagation.hpp" />
+    <ClInclude Include="Optimization\BlockCloner.hpp" />
+    <ClInclude Include="Optimization\BlockPlacement.hpp" />
+    <ClInclude Include="Optimization\BlockUtils.hpp" />
+    <ClCompile Include="Optimization\AddressLowering.cpp" />
+    <ClCompile Include="Optimization\AggregateCopyPropagation.cpp" />
+    <ClCompile Include="Optimization\BlockCloner.cpp" />
+    <ClCompile Include="Optimization\CFGSimplifier.cpp" />
+    <ClCompile Include="Optimization\CFGSimplifierJumpThreading.cpp" />
+    <ClCompile Include="Optimization\ConditionalConstantPropagation.cpp" />
+    <ClCompile Include="Optimization\ConditionalConstantPropagationRegions.cpp" />
+    <ClCompile Include="Optimization\ConversionPeephole.cpp" />
+    <ClInclude Include="Optimization\CFGCleaner.hpp" />
+    <ClCompile Include="Optimization\ComparisonPeephole.cpp" />
+    <ClInclude Include="Optimization\CodeSpecialization.hpp" />
+    <ClInclude Include="Optimization\FunctionSorting.hpp" />
+    <ClInclude Include="Optimization\ParameterReturnPromotion.hpp" />
+    <ClInclude Include="Optimization\RangeSimplifier.hpp" />
+    <ClInclude Include="Optimization\ForwardSubstitution.hpp" />
+    <ClInclude Include="Optimization\IfCombining.hpp" />
+    <ClInclude Include="Optimization\LoopInvariantMotion.hpp" />
+    <ClInclude Include="Optimization\RecursionElimination.hpp" />
+    <ClInclude Include="Optimization\ReturnMerging.hpp" />
+    <ClInclude Include="Optimization\SimpleDeadCodeElimination.hpp" />
+    <ClInclude Include="Optimization\LoadStoreElimination.hpp" />
+    <ClInclude Include="Optimization\FastFunctionInlining.hpp" />
+    <ClInclude Include="Optimization\SSAConversion.hpp" />
+    <ClInclude Include="Optimization\StaticPromotion.hpp" />
+    <ClInclude Include="Optimization\StoreCombining.hpp" />
+    <ClInclude Include="Optimization\TreeBalancing.hpp" />
+    <ClInclude Include="Optimization\ValueNumbering.hpp" />
+    <ClInclude Include="Optimization\GlobalPromotion.hpp" />
+    <ClInclude Include="Optimization\DeadCodeElimination.hpp" />
+    <ClInclude Include="Optimization\DeadGlobalElimination.hpp" />
+    <ClInclude Include="Optimization\CFGSimplifier.hpp" />
+    <ClInclude Include="Optimization\FunctionUtils.hpp" />
+    <ClInclude Include="Optimization\FunctionInlining.hpp" />
+    <ClInclude Include="Optimization\IndirectCallPromotion.hpp" />
+    <ClInclude Include="Optimization\IPConstantPropagation.hpp" />
+    <ClInclude Include="Optimization\IntrinsicPromotion.hpp" />
+    <ClCompile Include="Optimization\DeadCodeElimination.cpp" />
+    <ClCompile Include="Optimization\DeadGlobalElimination.cpp" />
+    <ClCompile Include="Optimization\FastFunctionInlining.cpp" />
+    <ClCompile Include="Optimization\GlobalPromotion.cpp" />
+    <ClCompile Include="Optimization\IfCombining.cpp" />
+    <ClCompile Include="Optimization\IndirectCallPromotion.cpp" />
+    <ClCompile Include="Optimization\Inliner.cpp" />
+    <ClCompile Include="Optimization\IPConstantPropagation.cpp" />
+    <ClCompile Include="Optimization\LogicalPeephole.cpp" />
+    <ClInclude Include="Optimization\LoopInversion.hpp" />
+    <ClInclude Include="Optimization\LoopUnrolling.hpp" />
+    <ClCompile Include="Optimization\LoopInvariantMotion.cpp" />
+    <ClCompile Include="Optimization\MemoryPeephole.cpp" />
+    <ClCompile Include="Optimization\MultiplicativePeephole.cpp" />
+    <ClInclude Include="Optimization\Peephole.hpp" />
+    <ClCompile Include="Optimization\ParameterReturnPromotion.cpp" />
+    <ClCompile Include="Optimization\PhiPeephole.cpp" />
+    <ClInclude Include="Optimization\ConditionalConstantPropagation.hpp" />
+    <ClInclude Include="Optimization\RegionCreation.hpp" />
+    <ClInclude Include="Optimization\ScalarReplacementOfAggregates.hpp" />
+    <ClInclude Include="Optimization\SimpleConstantPropagation.hpp" />
+    <ClInclude Include="Parser\DeclarationSemantic.hpp" />
+    <ClInclude Include="Parser\DeclspecExtension.hpp" />
+    <ClInclude Include="Parser\ExpressionSemantic.hpp" />
+    <ClInclude Include="Parser\Extension.hpp" />
+    <ClInclude Include="Parser\ParserHelpers.hpp" />
+    <ClInclude Include="Parser\MessagePragma.hpp" />
+    <ClInclude Include="Parser\NullHandler.hpp" />
+    <ClInclude Include="Parser\OncePragma.hpp" />
+    <ClInclude Include="Parser\PackPragma.hpp" />
+    <ClInclude Include="Parser\Parser.hpp" />
+    <ClInclude Include="Parser\PragmaExtension.hpp" />
+    <ClInclude Include="Parser\PragmaHandler.hpp" />
+    <ClInclude Include="Parser\Semantic.hpp" />
+    <ClInclude Include="Parser\SemanticHolder.hpp" />
+    <ClInclude Include="Parser\StatementSemantic.hpp" />
+    <ClInclude Include="Parser\SpecifierExtension.hpp" />
+    <ClInclude Include="Parser\WarningPragma.hpp" />
+    <ClInclude Include="Targets\TargetInfo.hpp" />
+    <ClInclude Include="Targets\TargetInstructionInfo.hpp" />
+    <ClInclude Include="Targets\TargetOptimizationInfo.hpp" />
+    <ClInclude Include="Targets\TargetRegisterInfo.hpp" />
+    <ClInclude Include="Targets\TargetSchedulingInfo.hpp" />
+    <ClInclude Include="Targets\X64\X64Target.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Abstraction\Windows\IOConst.cpp" />
+    <ClCompile Include="Abstraction\Windows\StringOpsConst.cpp" />
+    <ClCompile Include="Analysis\ConstantFolder.cpp" />
+    <ClCompile Include="Analysis\ConstantFolderArithmeticLogical.cpp" />
+    <ClCompile Include="Analysis\ConstantFolderComparison.cpp" />
+    <ClCompile Include="Analysis\DotPrinterBase.cpp" />
+    <ClCompile Include="Analysis\OperandInfo.cpp" />
+    <ClCompile Include="Analysis\StdLibRecognizer.cpp" />
+    <ClCompile Include="Analysis\UninitializedWarning.cpp" />
+    <ClCompile Include="AST\ConstantEvaluator.cpp" />
+    <ClCompile Include="AST\Declaration.cpp" />
+    <ClCompile Include="AST\DeclarationContext.cpp" />
+    <ClCompile Include="AST\Declarations.cpp" />
+    <ClCompile Include="AST\DotPrinter.cpp" />
+    <ClCompile Include="AST\Expression.cpp" />
+    <ClCompile Include="AST\Expressions.cpp" />
+    <ClCompile Include="AST\Statement.cpp" />
+    <ClCompile Include="AST\Statements.cpp" />
+    <ClCompile Include="AST\StructLayout.cpp" />
+    <ClCompile Include="AST\Type.cpp" />
+    <ClCompile Include="AST\TypeAlignment.cpp" />
+    <ClCompile Include="AST\TypeCombiner.cpp" />
+    <ClCompile Include="AST\TypeManager.cpp" />
+    <ClCompile Include="AST\Types.cpp" />
+    <ClCompile Include="AST\TypeSize.cpp" />
+    <ClCompile Include="AST\TypeString.cpp" />
+    <ClCompile Include="Base\DateTimeConst.cpp" />
+    <ClCompile Include="Base\DictionaryConst.cpp" />
+    <ClCompile Include="Base\ListConst.cpp" />
+    <ClCompile Include="Base\Log.cpp" />
+    <ClCompile Include="Base\Path.cpp" />
+    <ClCompile Include="Common\Context.cpp" />
+    <ClCompile Include="Common\FileManager.cpp" />
+    <ClCompile Include="Driver\DiagnosticPrinter.cpp" />
+    <ClCompile Include="IRGenerator\BinaryExpressionGen.cpp" />
+    <ClCompile Include="IRGenerator\CallExpressionGen.cpp" />
+    <ClCompile Include="IRGenerator\CastExpressionGen.cpp" />
+    <ClCompile Include="IRGenerator\ConstantInitializerGenerator.cpp" />
+    <ClCompile Include="IRGenerator\ExpressionGenerator.cpp" />
+    <ClCompile Include="IRGenerator\LoopGenerator.cpp" />
+    <ClCompile Include="IRGenerator\RecordExpressionGen.cpp" />
+    <ClCompile Include="IRGenerator\VLAGenerator.cpp" />
+    <ClCompile Include="IRGenerator\FunctionGenerator.cpp" />
+    <ClCompile Include="IRGenerator\UnaryExpressionGen.cpp" />
+    <ClCompile Include="IRGenerator\UnitGenerator.cpp" />
+    <ClCompile Include="IRGenerator\StatementGenerator.cpp" />
+    <ClCompile Include="IRGenerator\TypeGenerator.cpp" />
+    <ClCompile Include="IR\ArithmeticInstructions.cpp" />
+    <ClCompile Include="IR\Block.cpp" />
+    <ClCompile Include="IR\BuiltinFunctions.cpp" />
+    <ClCompile Include="IR\Constants.cpp" />
+    <ClCompile Include="IR\ConstantTable.cpp" />
+    <ClCompile Include="IR\ControlInstructions.cpp" />
+    <ClCompile Include="IR\ConversionInstructions.cpp" />
+    <ClCompile Include="IR\Function.cpp" />
+    <ClCompile Include="IR\GlobalVariable.cpp" />
+    <ClCompile Include="IR\Instruction.cpp" />
+    <ClCompile Include="IR\Interpreter.cpp" />
+    <ClCompile Include="IR\InterpreterDriver.cpp" />
+    <ClCompile Include="IR\IRParser.cpp" />
+    <ClCompile Include="IR\IRPrinter.cpp" />
+    <ClCompile Include="IR\IRStatistics.cpp" />
+    <ClCompile Include="IR\IRVerifier.cpp" />
+    <ClCompile Include="IR\LogicalInstructions.cpp" />
+    <ClCompile Include="IR\MathIntrinsics.cpp" />
+    <ClCompile Include="IR\MemoryIntrinsics.cpp" />
+    <ClCompile Include="IR\Operand.cpp" />
+    <ClCompile Include="IR\OtherInstructions.cpp" />
+    <ClCompile Include="IR\IRParserDriver.cpp" />
+    <ClCompile Include="IR\OtherIntrinsics.cpp" />
+    <ClCompile Include="IR\References.cpp" />
+    <ClCompile Include="IR\ReferenceTable.cpp" />
+    <ClCompile Include="IR\StackIntrinsics.cpp" />
+    <ClCompile Include="IR\Symbol.cpp" />
+    <ClCompile Include="IR\SymbolTable.cpp" />
+    <ClCompile Include="IR\IRType.cpp" />
+    <ClCompile Include="IR\IRTypes.cpp" />
+    <ClCompile Include="IR\Temporary.cpp" />
+    <ClCompile Include="IR\Unit.cpp" />
+    <ClCompile Include="IR\Variable.cpp" />
+    <ClCompile Include="IR\Visitor.cpp" />
+    <ClCompile Include="Lexer\CharSource.cpp" />
+    <ClCompile Include="Lexer\HeaderLookup.cpp" />
+    <ClCompile Include="Lexer\IfEvaluator.cpp" />
+    <ClCompile Include="Lexer\LexemeParsers.cpp" />
+    <ClCompile Include="Lexer\Lexer.cpp" />
+    <ClCompile Include="Lexer\MacroExpander.cpp" />
+    <ClCompile Include="Lexer\Preprocessor.cpp" />
+    <ClCompile Include="Lexer\TokenSource.cpp" />
+    <ClCompile Include="Optimization\BlockUtils.cpp" />
+    <ClCompile Include="Optimization\CFGCleaner.cpp" />
+    <ClCompile Include="Optimization\ComparisonLoadPeephole.cpp" />
+    <ClCompile Include="Optimization\ComparisonLogicalPeephole.cpp" />
+    <ClCompile Include="Optimization\ControlPeephole.cpp" />
+    <ClInclude Include="Optimization\Inliner.hpp" />
+    <ClCompile Include="Optimization\IntrinsicPeephole.cpp" />
+    <ClCompile Include="Optimization\IntrinsicPromotion.cpp" />
+    <ClCompile Include="Optimization\LogicalAndPeephole.cpp" />
+    <ClCompile Include="Optimization\LogicalOrPeephole.cpp" />
+    <ClCompile Include="Optimization\Peephole.cpp" />
+    <ClCompile Include="Optimization\QuestionPeephole.cpp" />
+    <ClCompile Include="Optimization\RangeSimplifier.cpp" />
+    <ClCompile Include="Optimization\ReassociationPeephole.cpp" />
+    <ClCompile Include="Optimization\RecursionElimination.cpp" />
+    <ClCompile Include="Optimization\ReturnMerging.cpp" />
+    <ClCompile Include="Optimization\ScalarReplacementOfAggregates.cpp" />
+    <ClCompile Include="Optimization\SimpleConstantPropagation.cpp" />
+    <ClCompile Include="Optimization\SimpleDeadCodeElimination.cpp" />
+    <ClCompile Include="Optimization\LoadStoreElimination.cpp" />
+    <ClCompile Include="Optimization\SSAConversion.cpp" />
+    <ClCompile Include="Optimization\StaticPromotion.cpp" />
+    <ClCompile Include="Optimization\StoreCombining.cpp" />
+    <ClCompile Include="Optimization\TreeBalancing.cpp" />
+    <ClCompile Include="Optimization\ValueNumbering.cpp" />
+    <ClCompile Include="Parser\ConversionSemantic.cpp" />
+    <ClCompile Include="Parser\DeclarationParser.cpp" />
+    <ClCompile Include="Parser\DeclarationSemantic.cpp" />
+    <ClCompile Include="Parser\DeclspecExtension.cpp" />
+    <ClCompile Include="Parser\ExpressionParser.cpp" />
+    <ClCompile Include="Parser\ExpressionSemantic.cpp" />
+    <ClCompile Include="Parser\ExpressionTypeSemantic.cpp" />
+    <ClCompile Include="Parser\InitializerSemantic.cpp" />
+    <ClCompile Include="Parser\MessagePragma.cpp" />
+    <ClCompile Include="Parser\NullHandler.cpp" />
+    <ClCompile Include="Parser\OncePragma.cpp" />
+    <ClCompile Include="Parser\OperatorSemantic.cpp" />
+    <ClCompile Include="Parser\PackPragma.cpp" />
+    <ClCompile Include="Parser\Parser.cpp" />
+    <ClCompile Include="Parser\PragmaExtension.cpp" />
+    <ClCompile Include="Parser\PragmaHandler.cpp" />
+    <ClCompile Include="Parser\UserTypeParser.cpp" />
+    <ClCompile Include="Parser\UserTypeSemantic.cpp" />
+    <ClCompile Include="Parser\Semantic.cpp" />
+    <ClCompile Include="Parser\SemanticHolder.cpp" />
+    <ClCompile Include="Parser\StatementParser.cpp" />
+    <ClCompile Include="Parser\StatementSemantic.cpp" />
+    <ClCompile Include="Parser\SpecifierExtension.cpp" />
+    <ClCompile Include="Parser\TypeSemantic.cpp" />
+    <ClCompile Include="Parser\.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Analysis\Analyses.def" />
+    <None Include="Common\Errors.def" />
+    <None Include="Common\Info.def" />
+    <None Include="Common\Keywords.def" />
+    <None Include="Common\Warnings.def" />
+    <None Include="Compilation Pass\Passes.def" />
+    <None Include="Driver\DiagnosticMessages.def" />
+    <None Include="IR\Instructions.def" />
+    <None Include="IR\Intrinsics.def" />
+    <None Include="IR\IRKeywords.def" />
+    <None Include="IR\IRParserErrors.def" />
+    <None Include="IR\IRParserMessages.def" />
+    <None Include="IR\IRVerifierErrors.def" />
+    <None Include="IR\IRVerifierMessages.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

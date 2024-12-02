@@ -1,0 +1,17 @@
+errorMessage(DUPLICATE_DECLARATION_SPECIFIERS, 
+			 "invalid storage-class specifier '#2'");
+
+errorMessage(INVALID_SPECIFIER_COMBINATION, 
+			 "invalid type specifier '#2' (type already provided)");
+
+errorMessage(DECLARATION_MISSING_TYPE, 
+			 "no type specifier provided");
+
+errorMessage(TAG_REDECLARATION, 
+			 "redeclaration of tag '#1' with a different type");
+
+errorMessage(STRUCT_REDEFINITION, 
+			 "redefinition for struct '#1'");
+
+errorMessage(STRUCT_REDEFINITION, 
+			 "redefinition for union '#1'");

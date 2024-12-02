@@ -1,0 +1,14 @@
+#define ABC
+#define DEF 123
+#define GHI "abc" + 456
+
+//
+#define XYZ(a,b,c) a + b + c
+
+/* */
+ABC
+DEF
+GHI
+XYZ(1,2,3)
+XYZ(DEF, 2, DEF)
+XYZ(GHI, GHI, GHI)

@@ -1,0 +1,550 @@
+#define A1
+#define A2
+#define A3
+#define A4
+#define A5
+#define A6
+#define A7
+#define A8
+#define A9
+#define A10
+#define A11
+#define A12
+#define A13
+#define A14
+#define A15
+#define A16
+#define A17
+#define A18
+#define A19
+#define A20
+#define A21
+#define A22
+#define A23
+#define A24
+#define A25
+#define A26
+#define A27
+#define A28
+#define A29
+#define A30
+#define A31
+#define A32
+#define A33
+#define A34
+#define A35
+#define A36
+#define A37
+#define A38
+#define A39
+#define A40
+#define A41
+#define A42
+#define A43
+#define A44
+#define A45
+#define A46
+#define A47
+#define A48
+#define A49
+#define A50
+#ifdef A1
+	a1
+	#ifdef A2
+		a2
+		#ifdef A3
+			a3
+			#ifdef A4
+				a4
+				#ifdef A5
+					a5
+					#ifdef A6
+						a6
+						#ifdef A7
+							a7
+							#ifdef A8
+								a8
+								#ifdef A9
+									a9
+									#ifdef A10
+										a10
+										#ifdef A11
+											a11
+											#ifdef A12
+												a12
+												#ifdef A13
+													a13
+													#ifdef A14
+														a14
+														#ifdef A15
+															a15
+															#ifdef A16
+																a16
+																#ifdef A17
+																	a17
+																	#ifdef A18
+																		a18
+																		#ifdef A19
+																			a19
+																			#ifdef A20
+																				a20
+																				#ifdef A21
+																					a21
+																					#ifdef A22
+																						a22
+																						#ifdef A23
+																							a23
+																							#ifdef A24
+																								a24
+																								#ifdef A25
+																									a25
+																									#ifdef A26
+																										a26
+																										#ifdef A27
+																											a27
+																											#ifdef A28
+																												a28
+																												#ifdef A29
+																													a29
+																													#ifdef A30
+																														a30
+																														#ifdef A31
+																															a31
+																															#ifdef A32
+																																a32
+																																#ifdef A33
+																																	a33
+																																	#ifdef A34
+																																		a34
+																																		#ifdef A35
+																																			a35
+																																			#ifdef A36
+																																				a36
+																																				#ifdef A37
+																																					a37
+																																					#ifdef A38
+																																						a38
+																																						#ifdef A39
+																																							a39
+																																							#ifdef A40
+																																								a40
+																																								#ifdef A41
+																																									a41
+																																									#ifdef A42
+																																										a42
+																																										#ifdef A43
+																																											a43
+																																											#ifdef A44
+																																												a44
+																																												#ifdef A45
+																																													a45
+																																													#ifdef A46
+																																														a46
+																																														#ifdef A47
+																																															a47
+																																															#ifdef A48
+																																																a48
+																																																#ifdef A49
+																																																	a49
+																																																	#ifdef A50
+																																																		a50
+																																																		#ifdef A51
+																																																			a51
+																																																			#ifdef A52
+																																																				a52
+																																																				#ifdef A53
+																																																					a53
+																																																					#ifdef A54
+																																																						a54
+																																																						#ifdef A55
+																																																							a55
+																																																							#ifdef A56
+																																																								a56
+																																																								#ifdef A57
+																																																									a57
+																																																									#ifdef A58
+																																																										a58
+																																																										#ifdef A59
+																																																											a59
+																																																											#ifdef A60
+																																																												a60
+																																																												#ifdef A61
+																																																													a61
+																																																													#ifdef A62
+																																																														a62
+																																																														#ifdef A63
+																																																															a63
+																																																															#ifdef A64
+																																																																a64
+																																																																#ifdef A65
+																																																																	a65
+																																																																	#ifdef A66
+																																																																		a66
+																																																																		#ifdef A67
+																																																																			a67
+																																																																			#ifdef A68
+																																																																				a68
+																																																																				#ifdef A69
+																																																																					a69
+																																																																					#ifdef A70
+																																																																						a70
+																																																																						#ifdef A71
+																																																																							a71
+																																																																							#ifdef A72
+																																																																								a72
+																																																																								#ifdef A73
+																																																																									a73
+																																																																									#ifdef A74
+																																																																										a74
+																																																																										#ifdef A75
+																																																																											a75
+																																																																											#ifdef A76
+																																																																												a76
+																																																																												#ifdef A77
+																																																																													a77
+																																																																													#ifdef A78
+																																																																														a78
+																																																																														#ifdef A79
+																																																																															a79
+																																																																															#ifdef A80
+																																																																																a80
+																																																																																#ifdef A81
+																																																																																	a81
+																																																																																	#ifdef A82
+																																																																																		a82
+																																																																																		#ifdef A83
+																																																																																			a83
+																																																																																			#ifdef A84
+																																																																																				a84
+																																																																																				#ifdef A85
+																																																																																					a85
+																																																																																					#ifdef A86
+																																																																																						a86
+																																																																																						#ifdef A87
+																																																																																							a87
+																																																																																							#ifdef A88
+																																																																																								a88
+																																																																																								#ifdef A89
+																																																																																									a89
+																																																																																									#ifdef A90
+																																																																																										a90
+																																																																																										#ifdef A91
+																																																																																											a91
+																																																																																											#ifdef A92
+																																																																																												a92
+																																																																																												#ifdef A93
+																																																																																													a93
+																																																																																													#ifdef A94
+																																																																																														a94
+																																																																																														#ifdef A95
+																																																																																															a95
+																																																																																															#ifdef A96
+																																																																																																a96
+																																																																																																#ifdef A97
+																																																																																																	a97
+																																																																																																	#ifdef A98
+																																																																																																		a98
+																																																																																																		#ifdef A99
+																																																																																																			a99
+																																																																																																			#ifdef A100
+																																																																																																				a100
+																																																																																																			#else
+																																																																																																				b100
+																																																																																																			#endif
+																																																																																																		#else
+																																																																																																			b99
+																																																																																																		#endif
+																																																																																																	#else
+																																																																																																		b98
+																																																																																																	#endif
+																																																																																																#else
+																																																																																																	b97
+																																																																																																#endif
+																																																																																															#else
+																																																																																																b96
+																																																																																															#endif
+																																																																																														#else
+																																																																																															b95
+																																																																																														#endif
+																																																																																													#else
+																																																																																														b94
+																																																																																													#endif
+																																																																																												#else
+																																																																																													b93
+																																																																																												#endif
+																																																																																											#else
+																																																																																												b92
+																																																																																											#endif
+																																																																																										#else
+																																																																																											b91
+																																																																																										#endif
+																																																																																									#else
+																																																																																										b90
+																																																																																									#endif
+																																																																																								#else
+																																																																																									b89
+																																																																																								#endif
+																																																																																							#else
+																																																																																								b88
+																																																																																							#endif
+																																																																																						#else
+																																																																																							b87
+																																																																																						#endif
+																																																																																					#else
+																																																																																						b86
+																																																																																					#endif
+																																																																																				#else
+																																																																																					b85
+																																																																																				#endif
+																																																																																			#else
+																																																																																				b84
+																																																																																			#endif
+																																																																																		#else
+																																																																																			b83
+																																																																																		#endif
+																																																																																	#else
+																																																																																		b82
+																																																																																	#endif
+																																																																																#else
+																																																																																	b81
+																																																																																#endif
+																																																																															#else
+																																																																																b80
+																																																																															#endif
+																																																																														#else
+																																																																															b79
+																																																																														#endif
+																																																																													#else
+																																																																														b78
+																																																																													#endif
+																																																																												#else
+																																																																													b77
+																																																																												#endif
+																																																																											#else
+																																																																												b76
+																																																																											#endif
+																																																																										#else
+																																																																											b75
+																																																																										#endif
+																																																																									#else
+																																																																										b74
+																																																																									#endif
+																																																																								#else
+																																																																									b73
+																																																																								#endif
+																																																																							#else
+																																																																								b72
+																																																																							#endif
+																																																																						#else
+																																																																							b71
+																																																																						#endif
+																																																																					#else
+																																																																						b70
+																																																																					#endif
+																																																																				#else
+																																																																					b69
+																																																																				#endif
+																																																																			#else
+																																																																				b68
+																																																																			#endif
+																																																																		#else
+																																																																			b67
+																																																																		#endif
+																																																																	#else
+																																																																		b66
+																																																																	#endif
+																																																																#else
+																																																																	b65
+																																																																#endif
+																																																															#else
+																																																																b64
+																																																															#endif
+																																																														#else
+																																																															b63
+																																																														#endif
+																																																													#else
+																																																														b62
+																																																													#endif
+																																																												#else
+																																																													b61
+																																																												#endif
+																																																											#else
+																																																												b60
+																																																											#endif
+																																																										#else
+																																																											b59
+																																																										#endif
+																																																									#else
+																																																										b58
+																																																									#endif
+																																																								#else
+																																																									b57
+																																																								#endif
+																																																							#else
+																																																								b56
+																																																							#endif
+																																																						#else
+																																																							b55
+																																																						#endif
+																																																					#else
+																																																						b54
+																																																					#endif
+																																																				#else
+																																																					b53
+																																																				#endif
+																																																			#else
+																																																				b52
+																																																			#endif
+																																																		#else
+																																																			b51
+																																																		#endif
+																																																	#else
+																																																		b50
+																																																	#endif
+																																																#else
+																																																	b49
+																																																#endif
+																																															#else
+																																																b48
+																																															#endif
+																																														#else
+																																															b47
+																																														#endif
+																																													#else
+																																														b46
+																																													#endif
+																																												#else
+																																													b45
+																																												#endif
+																																											#else
+																																												b44
+																																											#endif
+																																										#else
+																																											b43
+																																										#endif
+																																									#else
+																																										b42
+																																									#endif
+																																								#else
+																																									b41
+																																								#endif
+																																							#else
+																																								b40
+																																							#endif
+																																						#else
+																																							b39
+																																						#endif
+																																					#else
+																																						b38
+																																					#endif
+																																				#else
+																																					b37
+																																				#endif
+																																			#else
+																																				b36
+																																			#endif
+																																		#else
+																																			b35
+																																		#endif
+																																	#else
+																																		b34
+																																	#endif
+																																#else
+																																	b33
+																																#endif
+																															#else
+																																b32
+																															#endif
+																														#else
+																															b31
+																														#endif
+																													#else
+																														b30
+																													#endif
+																												#else
+																													b29
+																												#endif
+																											#else
+																												b28
+																											#endif
+																										#else
+																											b27
+																										#endif
+																									#else
+																										b26
+																									#endif
+																								#else
+																									b25
+																								#endif
+																							#else
+																								b24
+																							#endif
+																						#else
+																							b23
+																						#endif
+																					#else
+																						b22
+																					#endif
+																				#else
+																					b21
+																				#endif
+																			#else
+																				b20
+																			#endif
+																		#else
+																			b19
+																		#endif
+																	#else
+																		b18
+																	#endif
+																#else
+																	b17
+																#endif
+															#else
+																b16
+															#endif
+														#else
+															b15
+														#endif
+													#else
+														b14
+													#endif
+												#else
+													b13
+												#endif
+											#else
+												b12
+											#endif
+										#else
+											b11
+										#endif
+									#else
+										b10
+									#endif
+								#else
+									b9
+								#endif
+							#else
+								b8
+							#endif
+						#else
+							b7
+						#endif
+					#else
+						b6
+					#endif
+				#else
+					b5
+				#endif
+			#else
+				b4
+			#endif
+		#else
+			b3
+		#endif
+	#else
+		b2
+	#endif
+#else
+	b1
+#endif
